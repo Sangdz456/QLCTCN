@@ -1,13 +1,30 @@
-// src/routes/reportRoutes.js
 const express = require('express');
 const router = express.Router();
 const reportController = require('../controllers/reportController');
-const { protect } = require('../middleware/authMiddleware'); 
+const { protect } = require('../middleware/authMiddleware');
 
-// GET /api/summary - Lấy tóm tắt tài chính (Tổng thu, tổng chi, số dư)
+// ==========================
+// SUMMARY
+// ==========================
+
+// GET /api/summary
 router.get('/summary', protect, reportController.getFinancialSummary);
 
-// GET /api/reports/breakdown - API mới cho biểu đồ phân tích chi tiêu chi tiết
+// GET /api/summary/monthly?month=MM&year=YYYY
+router.get('/summary/monthly', protect, reportController.getMonthlySummary);
+
+// ==========================
+// BREAKDOWN
+// ==========================
+
+// GET /api/reports/breakdown
 router.get('/reports/breakdown', protect, reportController.getExpenseBreakdown);
+
+// GET /api/reports/breakdown/monthly?month=MM&year=YYYY
+router.get(
+    '/reports/breakdown/monthly',
+    protect,
+    reportController.getMonthlyBreakdown
+);
 
 module.exports = router;
