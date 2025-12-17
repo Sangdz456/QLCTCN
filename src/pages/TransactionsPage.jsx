@@ -260,7 +260,7 @@ const TransactionsPage = () => {
           <div className="flex gap-3 mt-4 md:mt-0">
             <button
               onClick={fetchInitialData}
-              className="flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors duration-200 text-sm font-medium"
+              className="flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-300 rounded-lg text-white hover:bg-gray-50 transition-colors duration-200 text-sm font-medium"
               disabled={loading}
             >
               <RefreshCw size={18} className={loading ? "animate-spin" : ""} />{" "}
