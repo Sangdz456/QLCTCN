@@ -1,0 +1,31 @@
+# 1. DEPENDENCIES / TH? VI?N ?Ã CÀI ??T
+# B? qua th? m?c node_modules trong c? frontend và backend
+node_modules/
+
+# 2. BUILD ARTIFACTS / FILE BIÊN D?CH
+# Các file build c?a Vite (Frontend)
+/dist
+/build
+/out
+
+# 3. SENSITIVE DATA / D? LI?U NH?Y C?M
+# File ch?a các bi?n môi tr??ng (Database URL, JWT Secret, API Keys, v.v.)
+.env
+.env.local
+
+# 4. LOGS AND CACHES
+*.log
+*.err
+
+# 5. OS AND IDE FILES
+.DS_Store
+Thumbs.db
+
+# 6. IDE SPECIFIC FILES (VS Code, WebStorm/IntelliJ)
+.vscode/
+.idea/
+
+# 7. NPM INSTALLATION FILES (Files ???c NPM t?o ra)
+package-lock.json 
+# N?u b?n dùng yarn:
+# yarn.lock
